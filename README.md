@@ -4,6 +4,9 @@ A simple Python project that shows current weather and 5-day forecasts using the
 You can use it either through the **command-line** or a **Streamlit web app**.
 
 ---
+## 📸 Screenshot
+
+![Weather App Screenshot](ok.png)
 
 ## How to Set Up
 
