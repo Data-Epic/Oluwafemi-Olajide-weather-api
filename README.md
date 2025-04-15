@@ -6,7 +6,7 @@ You can use it either through the **command-line** or a **Streamlit web app**.
 ---
 ## 📸 Screenshot
 
-![Weather App Screenshot](screenshot/ok.png)
+![Weather App Screenshot](ok.png)
 
 
 ## How to Set Up
