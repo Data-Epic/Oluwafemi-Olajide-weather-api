@@ -1,21 +1,19 @@
-# Import built-in and external modules
-import os  # For accessing environment variables (like API key)
-import requests  # For sending HTTP requests to the API
-from datetime import datetime  # For handling and formatting date/time
-from dotenv import load_dotenv  # To load environment variables from a .env file
+from dotenv import load_dotenv
+import os
+import requests
+from datetime import datetime  # Used for handling and formatting date/time data
 
-# Load the .env file where API key is stored
 load_dotenv()
 
-# Define a class to handle weather-related functionality
 class WeatherClient:
-    def __init__(self):
-        # Get API key from the environment (.env file)
-        self.api_key = os.getenv("WEATHER_API_KEY")
+    def __init__(self, api_key=None):
+        # This allows passing API key directly; if not, load from .env
+        self.api_key = api_key or os.getenv("WEATHER_API_KEY")
 
-        # Define base URLs for current weather and 5-day forecast
+        # Define base URLs for current weather and forecast
         self.current_url = "https://api.openweathermap.org/data/2.5/weather"
         self.forecast_url = "https://api.openweathermap.org/data/2.5/forecast"
+
 
     def get_weather(self, city, forecast=False):
         """
